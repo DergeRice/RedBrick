@@ -6,13 +6,13 @@ using SimpleInputNamespace;
 public class Player : MonoBehaviour
 {
     public Vector3 move;
-    public float forceAmount;
+    public float forceAmount, moveSpeed;
 
     private void FixedUpdate()
     {
         move.x = SimpleInput.GetAxis("Horizontal");
 
-        transform.position += move;
+        transform.position = transform.position + (move * Time.deltaTime * moveSpeed);
 
         if (SimpleInput.GetButton("Jump"))
         {

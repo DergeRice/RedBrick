@@ -361,7 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {x: 0, y: 0, z: 0}
-  forceAmount: 10
+  forceAmount: 20
+  moveSpeed: 10
 --- !u!1 &867324375
 GameObject:
   m_ObjectHideFlags: 0
