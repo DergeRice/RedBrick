@@ -137,7 +137,7 @@ Transform:
   m_Children:
   - {fileID: 778567267111201104}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4744829725727937166
 SpriteRenderer:
@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneText: {fileID: 213104233585908933}
+  zoneFillUI: {fileID: 7906402417909234988}
   zoneTime: 5
 --- !u!1 &4669728077784217208
 GameObject:

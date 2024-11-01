@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class FollowerZone : MonoBehaviour
 {
     public TMP_Text zoneText;
+    public Image zoneFillUI;
 
     public float zoneTime;
 
