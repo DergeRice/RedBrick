@@ -9,10 +9,9 @@ public class FollowerZone : MonoBehaviour
     public TMP_Text zoneText;
     public Image zoneFillUI;
     public float zoneTime;
-
+    public int count;
     private float startTime;
     private float barTime;
-
     private bool isTrigger = false;
 
     void Update()
@@ -25,6 +24,15 @@ public class FollowerZone : MonoBehaviour
             zoneText.text = startTime.ToString("F1");
 
             zoneFillUI.fillAmount = barTime / zoneTime;
+
+            if (startTime <= 0)
+            {
+                count++;
+                Debug.Log(count);
+                startTime = zoneTime;
+                barTime = 0f;
+
+            }  
         }
     }
     private void OnTriggerStay2D(Collider2D other)
