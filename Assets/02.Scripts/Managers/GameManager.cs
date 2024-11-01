@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-   //public Player player;
+    public Player player;
     public GameObject follower;
 
     public List<Follower> followers = new List<Follower>();
 
+    [ContextMenu("GetPlayer")]
     public void GetFollower()
     {
         var newFollower = Instantiate(follower.GetComponent<Follower>());
@@ -23,6 +24,9 @@ public class GameManager : Singleton<GameManager>
         {
             int index = i;
             followers[index].myIndex = index;
+            followers[index].target = player.transform;
+
         }
     }
+
 }

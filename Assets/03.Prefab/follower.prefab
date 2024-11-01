@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1699349336177244849}
   - component: {fileID: 4427178423914358341}
   - component: {fileID: 847074501341186086}
+  - component: {fileID: -4299861693253469705}
   m_Layer: 0
   m_Name: follower
   m_TagString: Untagged
@@ -120,3 +121,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1.125}
   m_Direction: 0
+--- !u!114 &-4299861693253469705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719817129608371985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe59afdf86739642afcdcefa68aa9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  followDistance: 4
+  moveSpeed: 6
+  myIndex: 0
