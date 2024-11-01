@@ -8,18 +8,34 @@ public class FollowerZone : MonoBehaviour
 {
     public TMP_Text zoneText;
     public Image zoneFillUI;
-
     public float zoneTime;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.tag == "Player")
+        {
+            Debug.Log("found player tag");
+            StartCoroutine(CountDown());
+        }
+    }
+
+    private IEnumerator CountDown()
+    {
+        float time = zoneTime;
+
+        while (time > 0)
+        {
+            Debug.Log(time.ToString("F1"));
+            zoneFillUI.fillAmount = time / zoneTime;
+            yield return new WaitForSeconds(1f); 
+            time -= 1f;
+        }
     }
 }
+
