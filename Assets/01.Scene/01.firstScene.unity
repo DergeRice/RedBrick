@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 894683982}
   - component: {fileID: 894683983}
   m_Layer: 0
-  m_Name: AudioMaster
+  m_Name: AudioMixerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
