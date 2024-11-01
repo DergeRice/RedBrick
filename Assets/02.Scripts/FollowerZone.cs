@@ -21,21 +21,37 @@ public class FollowerZone : MonoBehaviour
         if(other.tag == "Player")
         {
             Debug.Log("found player tag");
-            StartCoroutine(CountDown());
+            StartCoroutine(CountDownText());
+            StartCoroutine(FillCountUp());
         }
     }
 
-    private IEnumerator CountDown()
+    private IEnumerator CountDownText()
     {
-        float time = zoneTime;
+        float startTime = zoneTime;
 
-        while (time > 0)
-        {
-            Debug.Log(time.ToString("F1"));
-            zoneFillUI.fillAmount = time / zoneTime;
-            yield return new WaitForSeconds(1f); 
-            time -= 1f;
+        while (startTime > 0)
+        {  
+            zoneText.text = startTime.ToString("F1");
+            yield return new WaitForSeconds(1.0f); 
+            startTime -= 1.0f; 
         }
+ 
+        zoneText.text = "0";
+    }
+    private IEnumerator FillCountUp()
+    {
+        float startbar = 0f;
+
+        while (startbar < zoneTime)
+        {       
+            zoneFillUI.fillAmount = startbar / zoneTime;
+
+            yield return new WaitForSeconds(1.0f); 
+            startbar += 1.0f; 
+        }
+
+        zoneFillUI.fillAmount = 1f;
     }
 }
 
