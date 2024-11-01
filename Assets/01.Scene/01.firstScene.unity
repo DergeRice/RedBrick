@@ -3357,6 +3357,10 @@ MonoBehaviour:
   player: {fileID: 1830045626}
   followerPrefab: {fileID: 4719817129608371985, guid: 64b4e1037d1ca464da40377d566a1dbe, type: 3}
   followers: []
+  redMoonState: {fileID: 164527053}
+  redMoonRemainTime: 0
+  redMoonMaxTime: 50
+  redMoonLastingTime: 10
 --- !u!4 &2023716348
 Transform:
   m_ObjectHideFlags: 0
