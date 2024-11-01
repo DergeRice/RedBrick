@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
 
     public List<Follower> followers = new List<Follower>();
 
+    public GameObject redMoonState;
+
+    public float redMoonRemainTime , redMoonLastingTime;
+
     [ContextMenu("GetFollower")]
     public void GetFollower()
     {
@@ -16,6 +20,17 @@ public class GameManager : MonoBehaviour
         var newFollower = Instantiate(followerPrefab, player.transform.position, Quaternion.identity).GetComponent<Follower>();
         followers.Add(newFollower);
         SetFollowersAlign();
+    }
+
+    public void Update()
+    {
+        redMoonRemainTime += Time.deltaTime;
+
+        if(redMoonRemainTime < 0)
+        {
+            //redMoonRemainTime = redMoonRemainTime;
+            SetRedMoonState(redMoonLastingTime);
+        }
     }
 
     public void SetFollowersAlign()
@@ -40,4 +55,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    public void SetRedMoonState(float lastingTime)
+    {
+        redMoonState.SetActive(true);
+        Utils.DelayCall(lastingTime, () => { redMoonState.SetActive(false); });
+    }
 }
