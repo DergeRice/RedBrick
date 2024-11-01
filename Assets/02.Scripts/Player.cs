@@ -8,6 +8,11 @@ public class Player : MonoBehaviour
     public Vector3 move;
     public float forceAmount, moveSpeed;
 
+    private void Start()
+    {
+        //Camera.main.transform.parent = gameObject.transform;
+    }
+
     private void FixedUpdate()
     {
         move.x = SimpleInput.GetAxis("Horizontal");
