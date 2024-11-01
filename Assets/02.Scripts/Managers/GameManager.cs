@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public Player player;
+    //public Player player;
     public GameObject follower;
 
     public List<Follower> followers = new List<Follower>();
@@ -24,7 +24,7 @@ public class GameManager : Singleton<GameManager>
         {
             int index = i;
             followers[index].myIndex = index;
-            followers[index].target = player.transform;
+           // followers[index].target = player.transform;
 
         }
     }
