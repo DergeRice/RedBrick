@@ -11,12 +11,16 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         move.x = SimpleInput.GetAxis("Horizontal");
+        move.y = SimpleInput.GetAxis("Vertical");
 
         transform.position = transform.position + (move * Time.deltaTime * moveSpeed);
+    }
 
-        if (SimpleInput.GetButton("Jump"))
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("followerZone"))
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * forceAmount, ForceMode2D.Force);
+            
         }
     }
 }
