@@ -20,8 +20,9 @@ public class FollowerZone : MonoBehaviour
     }
     void Update()
     {
-        if (isTrigger && startTime > 0f)
+        if (isTrigger && startTime > 0f &&  GameManager.Instance.followers.Count < GameManager.Instance.maxFollowers)
         {
+
             startTime -= Time.deltaTime;
             barTime += Time.deltaTime;
 
@@ -40,12 +41,25 @@ public class FollowerZone : MonoBehaviour
             }  
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Player")&& !isTrigger)
+        {
+            if (GameManager.Instance.followers.Count >= GameManager.Instance.maxFollowers)
+            {
+                GameManager.Instance.ShowCharMsg("최대 수용량이에요!");
+                return;
+            }
+
+            isTrigger = true;
+            startTime = zoneTime;
+        }
+    }  
     private void OnTriggerStay2D(Collider2D other)
     {
         if(other.CompareTag("Player")&& !isTrigger)
         {
             isTrigger = true;
-            startTime = zoneTime;
         }
     }
 
@@ -57,7 +71,9 @@ public class FollowerZone : MonoBehaviour
             isTrigger = false;
             barTime = 0f;
             zoneText.text = zoneTime.ToString("F1");
-            zoneFillUI.fillAmount = barTime;
+            zoneFillUI.fillAmount = 1f;
+
+
 
         }
     }

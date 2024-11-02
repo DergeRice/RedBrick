@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class Follower : MonoBehaviour
@@ -11,6 +13,8 @@ public class Follower : MonoBehaviour
 
     private Vector3 targetPosition;
     private float followDistance;
+    public bool hasRandomBox = false;
+    public GameObject randomBoxObj;
 
     public Animator aChar, bChar, cChar;
     private Animator activeAnimator;
@@ -22,6 +26,12 @@ public class Follower : MonoBehaviour
         activeAnimator = GetActiveAnimator();
 
         transform.GetChild(charIndex).gameObject.SetActive(true);
+
+        if (Random.value < 0.1f)
+        {
+            hasRandomBox = true;
+            randomBoxObj.SetActive(true);
+        }
     }
 
     private Animator GetActiveAnimator()
@@ -62,5 +72,10 @@ public class Follower : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+    }
+
+    public void GetRunAway()
+    {
+        
     }
 }

@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using SimpleInputNamespace;
 using System;
+using DG.Tweening;
 using Random = UnityEngine.Random;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public Vector3 move;
     public float forceAmount, moveSpeed, maxSpeed;
 
-    public GameObject wereWolfState, humanState;
+    public GameObject wereWolfState, humanState, alertMsgBox;
 
     public Animator wereWolfAnimator, humanAnimator;
     //private SpriteRenderer sp;
@@ -57,8 +59,6 @@ public class Player : MonoBehaviour
             float newYRotation = move.x < 0 ? 180f : 0f; // y 축 값 설정
             transform.rotation = Quaternion.Euler(currentRotation.x, newYRotation, currentRotation.z);
         }
-
-        
 
         transform.position = transform.position + (move * Time.deltaTime * moveSpeed);
     }
@@ -149,5 +149,17 @@ public class Player : MonoBehaviour
         // 일정 거리 안에 도달했을 때 실행할 동작
         Debug.Log("Target reached! Performing action.");
         // 예: 공격 애니메이션, 상태 변경 등
+    }
+
+    public void ShowAlertMsg(string _text)
+    {
+        var msg = Instantiate(alertMsgBox);
+        msg.transform.position = alertMsgBox.transform.position;
+        msg.SetActive(true);
+        msg.transform.localScale = Vector3.one * 0.003f;
+        msg.transform.GetChild(0).GetComponent<TMP_Text>().text = _text;
+
+        msg.transform.DOLocalMoveY(msg.transform.position.y + 2f, 2f).SetEase(Ease.OutCirc);
+        Destroy(msg,2f);
     }
 }

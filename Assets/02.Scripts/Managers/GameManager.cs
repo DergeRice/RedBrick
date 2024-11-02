@@ -14,6 +14,8 @@ public class GameManager : Singleton<GameManager>
 
     public List<Follower> followers = new List<Follower>();
 
+    public int maxFollowers = 3;
+
     public GameObject redMoonState;
     public List<GameObject> wolfParticles;
     public Image redMoonAmount;
@@ -23,6 +25,8 @@ public class GameManager : Singleton<GameManager>
     public bool isRedMoonTime;
 
     public TMP_Text moonText;
+
+    public GameObject rouletteManager;
 
     [ContextMenu("GetFollower")]
     public void GetFollower(Vector3 pos)
@@ -37,6 +41,19 @@ public class GameManager : Singleton<GameManager>
         //Utils.DelayCall(2f, () => { newFollower.GetComponent<Collider2D>().isTrigger = false; });
 
         followers.Add(newFollower);
+        SetFollowersAlign();
+    }
+
+    internal void GetFollowerExit()
+    {
+        var target = followers[0];
+
+        if(target.hasRandomBox == true)
+        {
+            rouletteManager.SetActive(true);
+        }
+        followers.Remove(target);
+        Destroy(target.gameObject);
         SetFollowersAlign();
     }
 
@@ -140,8 +157,12 @@ public class GameManager : Singleton<GameManager>
         Transform target = followers == null ? followers[0].transform : null;
 
         player.SetWereWolfState(target);
-        
 
+
+        foreach (var item in followers)
+        {
+            item.GetRunAway();
+        }
 
         Utils.DelayCall(lastingTime, () =>
         {
@@ -157,5 +178,10 @@ public class GameManager : Singleton<GameManager>
             redMoonState.SetActive(false);
 
         });
+    }
+
+    public void ShowCharMsg(string text)
+    {
+        player.ShowAlertMsg(text);
     }
 }
