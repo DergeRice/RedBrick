@@ -132,9 +132,15 @@ public class GameManager : Singleton<GameManager>
 
     public void SetRedMoonState(float lastingTime)
     {
-
+        // 늑대인간 상태 시작
         isRedMoonTime = true;
         player.SetWereWolfMask(true);
+
+
+        Transform target = followers == null ? followers[0].transform : null;
+
+        player.SetWereWolfState(target);
+        
 
 
         Utils.DelayCall(lastingTime, () =>
