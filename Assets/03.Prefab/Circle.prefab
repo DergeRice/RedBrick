@@ -240,7 +240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneText: {fileID: 213104233585908933}
   zoneFillUI: {fileID: 7906402417909234988}
-  zoneTime: 5
+  zoneTime: 2
+  count: 0
 --- !u!1 &4669728077784217208
 GameObject:
   m_ObjectHideFlags: 0

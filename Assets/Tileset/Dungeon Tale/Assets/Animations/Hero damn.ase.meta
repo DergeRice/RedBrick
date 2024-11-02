@@ -1,0 +1,1832 @@
+fileFormatVersion: 2
+guid: 72834f1fcab60814883aa4704b5e08f9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Confuse
+    second: {fileID: 7400000, guid: d2474e90a910c26499efaeac28739b0b, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: bcc827ec47aec5145845c05ed3dc777f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Move
+    second: {fileID: 7400000, guid: dde63240835d0ea42ba63066923b33dd, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: None
+    second: {fileID: 7400000, guid: 432c4f2abe5204d47be4dd59499d04c5, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Sit
+    second: {fileID: 7400000, guid: 0f4a061c2c7de71459bc4e6a771c4299, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Stay
+    second: {fileID: 7400000, guid: e1304e2b44de2524bb5e0dd93b9f578c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Think
+    second: {fileID: 7400000, guid: 61fd560199e116f45a2263d7d208c692, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Use
+    second: {fileID: 7400000, guid: 84c2781a02a687a42aeed097222e73f0, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 16
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638661181971135876
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Hero damn_Frame_0
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 4
+      width: 16
+      height: 18
+    spriteID: 5f763ff72faffee439b2feff1a459457
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 4}
+  - name: Hero damn_Frame_1
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 4
+      width: 16
+      height: 18
+    spriteID: 48539451e68025c4ebfca74ea2d0bb7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 4}
+  - name: Hero damn_Frame_2
+    originalName: 
+    pivot: {x: 0.53333336, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 1218909f4a4cee34c820dc093b7619e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 109}
+  - name: Hero damn_Frame_3
+    originalName: 
+    pivot: {x: 0.53333336, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 4b207766a5a1644418c2d6cee01ea81b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 109}
+  - name: Hero damn_Frame_4
+    originalName: 
+    pivot: {x: 0.53333336, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 6933cb284fc8fa74da7e857a49ba6068
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 96, y: 109}
+  - name: Hero damn_Frame_5
+    originalName: 
+    pivot: {x: 0.53333336, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 870b0122e3fe78c4092cc2a0c76d96be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 109}
+  - name: Hero damn_Frame_6
+    originalName: 
+    pivot: {x: 0.53333336, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 142
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 4f030c4f861d5d24f82200177cb3d9fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 142, y: 109}
+  - name: Hero damn_Frame_7
+    originalName: 
+    pivot: {x: 0.53333336, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 9578c76fe2032a247a240742de86b7d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 109}
+  - name: Hero damn_Frame_8
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 4
+      width: 16
+      height: 18
+    spriteID: 92e86abc409516444a15c8535d19eab0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 4}
+  - name: Hero damn_Frame_9
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 4
+      width: 16
+      height: 18
+    spriteID: d8ee297c854079548bb26899df8df055
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 4}
+  - name: Hero damn_Frame_10
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 126
+      y: 4
+      width: 16
+      height: 18
+    spriteID: 4c1d0337e2f1862419980abd8fcde739
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 126, y: 4}
+  - name: Hero damn_Frame_17
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 150
+      y: 4
+      width: 16
+      height: 18
+    spriteID: e0c5cc39fd3162d49b905d1215c1f205
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 150, y: 4}
+  - name: Hero damn_Frame_29
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 4
+      width: 16
+      height: 18
+    spriteID: 9909d89952666684eb95c778090d6a33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 4}
+  - name: Hero damn_Frame_30
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 198
+      y: 4
+      width: 16
+      height: 18
+    spriteID: f572858ea3444ed44a58ed6480954bcd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 198, y: 4}
+  - name: Hero damn_Frame_31
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 83
+      width: 16
+      height: 17
+    spriteID: 2a24e251e194c7a43981f3faafd36926
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 83}
+  - name: Hero damn_Frame_32
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 83
+      width: 16
+      height: 17
+    spriteID: 2074b5852e4bd1e478845c3164606590
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 83}
+  - name: Hero damn_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 83
+      width: 16
+      height: 17
+    spriteID: 28ab5011a8b2a40409071a68a4ec4fda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 83}
+  - name: Hero damn_Frame_35
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 83
+      width: 16
+      height: 17
+    spriteID: e8f6f80f722f6954a92d5b5253a3c4ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 172, y: 83}
+  - name: Hero damn_Frame_36
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 83
+      width: 16
+      height: 17
+    spriteID: e45a688ff864bfe40a75da9fc2652e60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 83}
+  - name: Hero damn_Frame_37
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 4
+      width: 16
+      height: 18
+    spriteID: b8ff550473b3d2a49828343b1f08873a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 4}
+  - name: Hero damn_Frame_38
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 30
+      width: 16
+      height: 19
+    spriteID: 0555f68a4c986f64fbcd5a94910c3823
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 30}
+  - name: Hero damn_Frame_42
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 8f4ed633f69b5044bb8aaa13097c4ddb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 188, y: 109}
+  - name: Hero damn_Frame_46
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 3aeca95d74ca75b41b5af3f9f194b0b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 211, y: 109}
+  - name: Hero damn_Frame_49
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 30
+      width: 16
+      height: 18
+    spriteID: 42cdc82995e956a4aa1b92180dffdb20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 30}
+  - name: Hero damn_Frame_50
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 83
+      width: 16
+      height: 17
+    spriteID: 2a6409deaa57e3c449de06b435233083
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 83}
+  - name: Hero damn_Frame_51
+    originalName: 
+    pivot: {x: 0.44444448, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 18
+      height: 18
+    spriteID: bbf9c28dc54a1d244a80b8b40ff2fea7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Hero damn_Frame_52
+    originalName: 
+    pivot: {x: 0.4375, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 30
+      width: 16
+      height: 18
+    spriteID: fb7e63eb64b9fb344a3000907523d811
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 30}
+  - name: Hero damn_Frame_53
+    originalName: 
+    pivot: {x: 0.42857146, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 109
+      width: 14
+      height: 20
+    spriteID: 3e625ed504ac9204499b34f1c2ee4851
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 109}
+  - name: Hero damn_Frame_54
+    originalName: 
+    pivot: {x: 0.46666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 234
+      y: 109
+      width: 15
+      height: 18
+    spriteID: 00722e4bd5c16394a8bf159d1a6d9e8e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 234, y: 109}
+  - name: Hero damn_Frame_55
+    originalName: 
+    pivot: {x: 0.46666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 137
+      width: 15
+      height: 18
+    spriteID: 48ac9ff74d70adf4b87c9ec527663af2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 137}
+  - name: Hero damn_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 30
+      width: 16
+      height: 18
+    spriteID: 375fedf7ca2a657429429dbb2cc93138
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 30}
+  - name: Hero damn_Frame_11
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 30
+      width: 16
+      height: 18
+    spriteID: 5ba854c4b6f69614ca5526a25aaf9153
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 30}
+  - name: Hero damn_Frame_12
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 30
+      width: 16
+      height: 18
+    spriteID: ecc42207e1ba3264cb17b88b1dc130dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 30}
+  - name: Hero damn_Frame_13
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 30
+      width: 16
+      height: 18
+    spriteID: 14ff8f6833c3bba41a41de3c03ca2c8e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 30}
+  - name: Hero damn_Frame_14
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 30
+      width: 16
+      height: 18
+    spriteID: 0f02af28c7ee8aa49940bb0ecb459156
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 172, y: 30}
+  - name: Hero damn_Frame_15
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 30
+      width: 16
+      height: 18
+    spriteID: 90e878c862b0b1442a3cbd88d9672c0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 30}
+  - name: Hero damn_Frame_16
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 30
+      width: 16
+      height: 18
+    spriteID: 296c4d2d482b99547a10ff06aa728349
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 30}
+  - name: Hero damn_Frame_18
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 57
+      width: 16
+      height: 18
+    spriteID: 8d77e2593a3797047b48a099f4d44556
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 57}
+  - name: Hero damn_Frame_19
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 57
+      width: 16
+      height: 18
+    spriteID: 7ac341474e9b1e34c938c2d92c789ff7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 57}
+  - name: Hero damn_Frame_20
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 57
+      width: 16
+      height: 18
+    spriteID: 749c0856f12e0834898ac230081b2a53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 57}
+  - name: Hero damn_Frame_21
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 57
+      width: 16
+      height: 18
+    spriteID: ef429848baf2c7746a10821ab57eebe0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 57}
+  - name: Hero damn_Frame_22
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 57
+      width: 16
+      height: 18
+    spriteID: d2f28461033f7034694808f54a931859
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 57}
+  - name: Hero damn_Frame_23
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 57
+      width: 16
+      height: 18
+    spriteID: ec7592b1a6201734ca2bec239756b031
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 57}
+  - name: Hero damn_Frame_24
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 57
+      width: 16
+      height: 18
+    spriteID: eef248634b9a0f44ebde9dc0cea26d23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 57}
+  - name: Hero damn_Frame_25
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 57
+      width: 16
+      height: 18
+    spriteID: 82ddec90c8e679b488a088e583b1ac78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 172, y: 57}
+  - name: Hero damn_Frame_26
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 57
+      width: 16
+      height: 18
+    spriteID: c9a3861dc21c47040b121dbbac6630c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 57}
+  - name: Hero damn_Frame_27
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 57
+      width: 16
+      height: 18
+    spriteID: 31ad630c431c1de449d1f20e3bc0d0c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 57}
+  - name: Hero damn_Frame_28
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 83
+      width: 16
+      height: 18
+    spriteID: e17be06bdd3e1fd4fbd31fbf1e2864db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 83}
+  - name: Hero damn_Frame_33
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 109
+      width: 16
+      height: 17
+    spriteID: c5d2888ee5c68ea4a83b544e41f6bd72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 109}
+  - name: Hero damn_Frame_39
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 83
+      width: 16
+      height: 18
+    spriteID: 170a3e06e24239c4baaff7b43acfe24e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 83}
+  - name: Hero damn_Frame_40
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 83
+      width: 16
+      height: 18
+    spriteID: f33dd15df6b9c7d40b798d6522c6ebf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 83}
+  - name: Hero damn_Frame_41
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 83
+      width: 16
+      height: 18
+    spriteID: 069853995ef4e2e44b641b6cde145f0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 83}
+  - name: Hero damn_Frame_43
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 137
+      width: 15
+      height: 18
+    spriteID: b5442e5e8920e5246b22be7547081972
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 137}
+  - name: Hero damn_Frame_44
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 137
+      width: 15
+      height: 18
+    spriteID: f77408f80cbb5f1458ee9b6119532089
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 137}
+  - name: Hero damn_Frame_45
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 137
+      width: 15
+      height: 18
+    spriteID: 4f4cf704458262e4a905fb3abcf19888
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 137}
+  - name: Hero damn_Frame_47
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 137
+      width: 15
+      height: 18
+    spriteID: 0d55c55cfa46c7445998562ca27d84f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 96, y: 137}
+  - name: Hero damn_Frame_48
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 137
+      width: 15
+      height: 18
+    spriteID: bbb6119532b1b4b41818ff3cf6067323
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 137}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 676479670
+    name: Hero damn
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Hero damn_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 5f763ff72faffee439b2feff1a459457
+    - name: Hero damn_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 48539451e68025c4ebfca74ea2d0bb7d
+    - name: Hero damn_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 2
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 1218909f4a4cee34c820dc093b7619e0
+    - name: Hero damn_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 2
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 4b207766a5a1644418c2d6cee01ea81b
+    - name: Hero damn_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 2
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 6933cb284fc8fa74da7e857a49ba6068
+    - name: Hero damn_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 2
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 870b0122e3fe78c4092cc2a0c76d96be
+    - name: Hero damn_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 2
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 4f030c4f861d5d24f82200177cb3d9fd
+    - name: Hero damn_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 2
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 9578c76fe2032a247a240742de86b7d4
+    - name: Hero damn_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 92e86abc409516444a15c8535d19eab0
+    - name: Hero damn_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: d8ee297c854079548bb26899df8df055
+    - name: Hero damn_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 4c1d0337e2f1862419980abd8fcde739
+    - name: Hero damn_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: e0c5cc39fd3162d49b905d1215c1f205
+    - name: Hero damn_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 9909d89952666684eb95c778090d6a33
+    - name: Hero damn_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: f572858ea3444ed44a58ed6480954bcd
+    - name: Hero damn_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 17
+      spriteId: 2a24e251e194c7a43981f3faafd36926
+    - name: Hero damn_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 17
+      spriteId: 2074b5852e4bd1e478845c3164606590
+    - name: Hero damn_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 2
+        y: 0
+        width: 16
+        height: 17
+      spriteId: 28ab5011a8b2a40409071a68a4ec4fda
+    - name: Hero damn_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 17
+      spriteId: e8f6f80f722f6954a92d5b5253a3c4ee
+    - name: Hero damn_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 17
+      spriteId: e45a688ff864bfe40a75da9fc2652e60
+    - name: Hero damn_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: b8ff550473b3d2a49828343b1f08873a
+    - name: Hero damn_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 19
+      spriteId: 0555f68a4c986f64fbcd5a94910c3823
+    - name: Hero damn_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 1
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 8f4ed633f69b5044bb8aaa13097c4ddb
+    - name: Hero damn_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 1
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 3aeca95d74ca75b41b5af3f9f194b0b3
+    - name: Hero damn_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 42cdc82995e956a4aa1b92180dffdb20
+    - name: Hero damn_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 17
+      spriteId: 2a6409deaa57e3c449de06b435233083
+    - name: Hero damn_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 2
+        y: 0
+        width: 18
+        height: 18
+      spriteId: bbf9c28dc54a1d244a80b8b40ff2fea7
+    - name: Hero damn_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 3
+        y: 0
+        width: 16
+        height: 18
+      spriteId: fb7e63eb64b9fb344a3000907523d811
+    - name: Hero damn_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 4
+        y: 0
+        width: 14
+        height: 20
+      spriteId: 3e625ed504ac9204499b34f1c2ee4851
+    - name: Hero damn_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 3
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 00722e4bd5c16394a8bf159d1a6d9e8e
+    - name: Hero damn_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 3
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 48ac9ff74d70adf4b87c9ec527663af2
+    - name: Hero damn_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 2
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 375fedf7ca2a657429429dbb2cc93138
+    - name: Hero damn_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 5ba854c4b6f69614ca5526a25aaf9153
+    - name: Hero damn_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: ecc42207e1ba3264cb17b88b1dc130dc
+    - name: Hero damn_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 14ff8f6833c3bba41a41de3c03ca2c8e
+    - name: Hero damn_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 0f02af28c7ee8aa49940bb0ecb459156
+    - name: Hero damn_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 90e878c862b0b1442a3cbd88d9672c0d
+    - name: Hero damn_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 296c4d2d482b99547a10ff06aa728349
+    - name: Hero damn_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 8d77e2593a3797047b48a099f4d44556
+    - name: Hero damn_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 7ac341474e9b1e34c938c2d92c789ff7
+    - name: Hero damn_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 749c0856f12e0834898ac230081b2a53
+    - name: Hero damn_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: ef429848baf2c7746a10821ab57eebe0
+    - name: Hero damn_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: d2f28461033f7034694808f54a931859
+    - name: Hero damn_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: ec7592b1a6201734ca2bec239756b031
+    - name: Hero damn_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: eef248634b9a0f44ebde9dc0cea26d23
+    - name: Hero damn_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 82ddec90c8e679b488a088e583b1ac78
+    - name: Hero damn_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: c9a3861dc21c47040b121dbbac6630c9
+    - name: Hero damn_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 31ad630c431c1de449d1f20e3bc0d0c2
+    - name: Hero damn_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: e17be06bdd3e1fd4fbd31fbf1e2864db
+    - name: Hero damn_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 17
+      spriteId: c5d2888ee5c68ea4a83b544e41f6bd72
+    - name: Hero damn_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 170a3e06e24239c4baaff7b43acfe24e
+    - name: Hero damn_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: f33dd15df6b9c7d40b798d6522c6ebf9
+    - name: Hero damn_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 1
+        y: 0
+        width: 16
+        height: 18
+      spriteId: 069853995ef4e2e44b641b6cde145f0b
+    - name: Hero damn_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 1
+        y: 0
+        width: 15
+        height: 18
+      spriteId: b5442e5e8920e5246b22be7547081972
+    - name: Hero damn_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 1
+        y: 0
+        width: 15
+        height: 18
+      spriteId: f77408f80cbb5f1458ee9b6119532089
+    - name: Hero damn_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 1
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 4f4cf704458262e4a905fb3abcf19888
+    - name: Hero damn_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 1
+        y: 0
+        width: 15
+        height: 18
+      spriteId: 0d55c55cfa46c7445998562ca27d84f8
+    - name: Hero damn_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 1
+        y: 0
+        width: 15
+        height: 18
+      spriteId: bbb6119532b1b4b41818ff3cf6067323
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 20, y: 25}

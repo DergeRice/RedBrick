@@ -14,6 +14,10 @@ public class FollowerZone : MonoBehaviour
     private float barTime;
     private bool isTrigger = false;
 
+    private void Start()
+    {
+        zoneText.text = zoneTime.ToString();
+    }
     void Update()
     {
         if (isTrigger && startTime > 0f)
@@ -29,6 +33,7 @@ public class FollowerZone : MonoBehaviour
             {
                 count++;
                 Debug.Log(count);
+                GameManager.Instance.GetFollower(transform.position);
                 startTime = zoneTime;
                 barTime = 0f;
 
@@ -39,7 +44,6 @@ public class FollowerZone : MonoBehaviour
     {
         if(other.CompareTag("Player")&& !isTrigger)
         {
-            Debug.Log("found Player");
             isTrigger = true;
             startTime = zoneTime;
         }
@@ -50,7 +54,6 @@ public class FollowerZone : MonoBehaviour
         
         if(other.CompareTag("Player"))
         {
-            Debug.Log("exited Player");
             isTrigger = false;
             barTime = 0f;
             zoneText.text = zoneTime.ToString("F1");
