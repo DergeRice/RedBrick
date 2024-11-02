@@ -61,23 +61,6 @@ public class RouletteManager : MonoBehaviour
         autoScrollButton.onClick.AddListener(ToggleAutoScroll);
     }
 
-    public void SetAlign()
-    {
-<<<<<<< Updated upstream
-        // If auto-scrolling is enabled, update the scroll position
-        if (isAutoScrolling)
-        {
-            content.anchoredPosition += new Vector2(0, autoScrollSpeed * Time.deltaTime);
-        }
-
-        // Check the scroll position and reposition items if needed
-        float newScrollPosition = content.anchoredPosition.y;
-
-        // If scrolled past a certain point, reposition items
-        if (newScrollPosition != scrollPosition)
-=======
-
-    }
 
     private IEnumerator SpinRoulette(float time)
     {
@@ -89,42 +72,17 @@ public class RouletteManager : MonoBehaviour
 
         // 스크롤링 시작
         while (elapsedTime < slowDownDuration)
->>>>>>> Stashed changes
         {
             scrollRect.verticalNormalizedPosition -= currentSpeed * Time.deltaTime;
             elapsedTime += Time.deltaTime;
             currentSpeed = Mathf.Lerp(scrollSpeed, 0, elapsedTime / slowDownDuration); // 점차 속도 줄이기
 
-<<<<<<< Updated upstream
-            // Move items up when scrolling down
-            if (delta < 0)
-            {
-                if (content.anchoredPosition.y < -itemHeight)
-                {
-                    RouletteUI firstItem = rouletteUIs[0];
-                    rouletteUIs.RemoveAt(0);
-                    firstItem.transform.SetAsLastSibling();
-                    rouletteUIs.Add(firstItem);
-                    firstItem.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -((itemCount - 1) * itemHeight));
-                }
-            }
-            // Move items down when scrolling up
-            else if (delta > 0)
-            {
-                if (content.anchoredPosition.y > -itemCount * itemHeight + itemHeight)
-                {
-                    RouletteUI lastItem = rouletteUIs[rouletteUIs.Count - 1];
-                    rouletteUIs.RemoveAt(rouletteUIs.Count - 1);
-                    lastItem.transform.SetAsFirstSibling();
-                    rouletteUIs.Insert(0, lastItem);
-                    lastItem.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-                }
-=======
+
             // 스크롤 위치가 0.1 이하로 내려가면 0.9로 재설정 (자연스러운 순환)
             if (scrollRect.verticalNormalizedPosition <= 0.1f)
             {
                 scrollRect.verticalNormalizedPosition = 0.9f;
->>>>>>> Stashed changes
+
             }
 
             yield return null;
