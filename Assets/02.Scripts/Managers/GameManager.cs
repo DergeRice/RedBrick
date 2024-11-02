@@ -57,6 +57,17 @@ public class GameManager : Singleton<GameManager>
         SetFollowersAlign();
     }
 
+    public void GetLostFollower(Follower follower)
+    {
+        followers.Remove(follower);
+    }
+
+    public void GetJoinFollower(Follower follower)
+    {
+        followers.Add(follower);
+        SetFollowersAlign();
+    }
+
     private void Start()
     {
         redMoonRemainTime = redMoonMaxTime;
@@ -159,9 +170,9 @@ public class GameManager : Singleton<GameManager>
         player.SetWereWolfState(target);
 
 
-        foreach (var item in followers)
+        for (int i = 0; i < followers.Count; i++)
         {
-            item.GetRunAway();
+            followers[i].GetRunAway(player.transform);
         }
 
         Utils.DelayCall(lastingTime, () =>
@@ -169,7 +180,12 @@ public class GameManager : Singleton<GameManager>
             redMoonRemainTime = redMoonMaxTime;
             isRedMoonTime = false;
             redMoonState.GetComponent<Image>().DOFade(0, 1f);
-            player.SetWereWolfMask(false);
+            player.SetWereWolfMask(false); // ¥¡¿Œ ≥°
+
+            foreach (var item in followers)
+            {
+                item.GetIdleState();
+            }
 
         });
 

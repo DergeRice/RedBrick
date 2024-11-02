@@ -28,6 +28,7 @@ public class RouletteManager : MonoBehaviour
 
     void Start()
     {
+        GameManager.Instance.rouletteManager = gameObject;
         SetupRouletteItems();
         spinButton.onClick.AddListener(StartRoulette);
     }
