@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bzonechipmunk : MonoBehaviour
+public class BzoneChipmunk : MonoBehaviour
 {
     public float moveSpeed = 2f; // 몬스터의 이동 속도
     public float minX = -40f; // x축 최소값
@@ -11,7 +11,7 @@ public class Bzonechipmunk : MonoBehaviour
     public float maxY = 5f; // y축 최대값
     private Vector3 targetPosition;
 
-   /// public Animator chpiMunk;
+  
 
 
     void Start()
