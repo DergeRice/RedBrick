@@ -80,6 +80,7 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         redMoonRemainTime = redMoonMaxTime;
+        PauseGame();
     }
 
 
@@ -228,5 +229,16 @@ public class GameManager : Singleton<GameManager>
     public void ShowCharMsg(string text)
     {
         player.ShowAlertMsg(text);
+    }
+
+    [ContextMenu("PauseGame")]
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+    [ContextMenu("ResumeGame")]
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
     }
 }

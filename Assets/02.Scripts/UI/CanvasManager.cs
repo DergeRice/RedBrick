@@ -80,4 +80,9 @@ public class CanvasManager : MonoBehaviour
         }
 
     }
+
+    public void GameStart()
+    {
+        gameManager.ResumeGame();
+    }
 }

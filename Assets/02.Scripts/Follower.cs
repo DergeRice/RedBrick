@@ -48,7 +48,7 @@ public class Follower : MonoBehaviour
 
     private void Update()
     {
-
+        keydownButton.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         if (isNearChar && Input.GetKeyDown(KeyCode.E))
         {
@@ -141,6 +141,7 @@ public class Follower : MonoBehaviour
             else if (directionAwayFromTarget.x > 0)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
+
             }
 
             yield return null; // 다음 프레임까지 대기
