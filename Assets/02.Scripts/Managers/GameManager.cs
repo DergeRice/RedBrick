@@ -81,6 +81,7 @@ public class GameManager : Singleton<GameManager>
     {
         redMoonRemainTime = redMoonMaxTime;
         PauseGame();
+        GameObject.Find("SettingBtn").SetActive(false);
     }
 
 
@@ -192,6 +193,8 @@ public class GameManager : Singleton<GameManager>
         List<Follower> tmpList = new List<Follower>();
 
         tmpList = followers;
+
+        SoundManager.Instance.PlaySound("howling",SoundType.SFX);
 
         for (int i = 0; i < followers.Count; i++)
         {

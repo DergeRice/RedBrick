@@ -74,6 +74,7 @@ public class Player : MonoBehaviour
 
     public void SetWereWolfMask(bool wear)
     {
+
         wereWolfState.SetActive(wear);
         humanState.SetActive(!wear);
 
@@ -151,6 +152,8 @@ public class Player : MonoBehaviour
     {
         float closeDistance = 0.1f; // 목표물에 다가설 거리
         followTarget = target;
+
+        if(isBinding) SoundManager.Instance.PlaySound("fightWolf", SoundType.SFX);
 
         while (followTarget != null && (transform.position - target.position).sqrMagnitude > closeDistance * closeDistance)
         {

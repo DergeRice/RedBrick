@@ -18,7 +18,8 @@ public class Chain : MonoBehaviour
 
             bool reverse = GameManager.Instance.player.isBinding;
             GameManager.Instance.player.isBinding = !reverse;
-            
+
+            SoundManager.Instance.PlaySound("chain", SoundType.SFX);
         }
     }
 

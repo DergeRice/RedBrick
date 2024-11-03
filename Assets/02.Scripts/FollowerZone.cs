@@ -37,6 +37,7 @@ public class FollowerZone : MonoBehaviour
                 GameManager.Instance.GetFollower(transform.position);
                 startTime = zoneTime;
                 barTime = 0f;
+                SoundManager.Instance.PlaySound("cameDoorSound", SoundType.SFX);
 
             }  
         }
