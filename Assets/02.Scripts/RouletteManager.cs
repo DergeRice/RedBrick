@@ -38,11 +38,12 @@ public class RouletteManager : MonoBehaviour
     {
         root.SetActive(true);
         spinButton.enabled = true;
+        GameManager.Instance.PauseGame();
     }
     public void SetDisable()
     {
         root.SetActive(false);
-
+        GameManager.Instance.ResumeGame();
     }
 
     // 아이템을 ScrollRect Content에 추가
@@ -88,8 +89,8 @@ public class RouletteManager : MonoBehaviour
         // 스크롤링 시작
         while (elapsedTime < slowDownDuration)
         {
-            scrollRect.verticalNormalizedPosition -= currentSpeed * Time.deltaTime;
-            elapsedTime += Time.deltaTime;
+            scrollRect.verticalNormalizedPosition -= currentSpeed * Time.unscaledDeltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
             currentSpeed = Mathf.Lerp(scrollSpeed, 0, elapsedTime / slowDownDuration); // 점차 속도 줄이기
 
 
@@ -109,7 +110,7 @@ public class RouletteManager : MonoBehaviour
 
         // 최종 위치 정렬
         // DOTween을 사용하여 목표 위치로 이동하고, OnComplete로 위치를 보정
-        content.GetComponent<RectTransform>().DOAnchorPosY(targetY, 0.3f).SetEase(Ease.OutCirc);
+        content.GetComponent<RectTransform>().DOAnchorPosY(targetY, 0.3f).SetEase(Ease.OutCirc).SetUpdate(true);
         isSpinning = false;
 
         Utils.DelayCall(0.4f, () => 
@@ -120,7 +121,7 @@ public class RouletteManager : MonoBehaviour
             rouletteDatas[selectedTarget.GetComponent<RouletteUI>().myEventIndex].successAction.Invoke();
         });
 
-        Utils.DelayCall(0.6f, () =>
+        Utils.DelayCall(1f, () =>
         {
             SetDisable();
         });
@@ -168,7 +169,7 @@ public class RouletteManager : MonoBehaviour
         rouletteDatas[3].successAction += () => { IncreaseFollowerMax(1); };
         rouletteDatas[4].successAction += () => { IncreasePlayerSpeed(1); };
         rouletteDatas[5].successAction += () => { DecreaseRescueTime(0.2f); };
-        rouletteDatas[6].successAction += () => { DecreaseFollowerLoseSpeedAmount(0.2f); };
+        rouletteDatas[6].successAction += () => { DecreaseFollowerLoseSpeedAmount(0.1f); };
         rouletteDatas[7].successAction += () => { IncreaseWhiteMoonTime(2f); };
         rouletteDatas[8].successAction += () => { 
             IncreaseFollowerMax(3);
