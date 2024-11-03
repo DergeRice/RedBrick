@@ -39,10 +39,17 @@ public class ExitZone : MonoBehaviour
                 zoneMaxText.text = $"{count}/{zoneMaxCount}";
                 startTime = zoneTime;
                 barTime = 0f;
+                
+
                 GameManager.Instance.GetFollowerExit();
+                if(count >= zoneMaxCount)
+                {
+                    GetComponent<SpriteRenderer>().color = new Color32(90, 90, 90, 255);
+                }
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !isTrigger )
