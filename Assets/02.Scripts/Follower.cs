@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using Random = UnityEngine.Random;
 
 
@@ -15,13 +17,18 @@ public class Follower : MonoBehaviour
     private Vector3 targetPosition;
     private float followDistance;
     public bool hasRandomBox = false;
-    public GameObject randomBoxObj, keydownButton;
+    public GameObject randomBoxObj, keydownButton, deadImg;
 
     public Animator aChar, bChar, cChar;
     private Animator activeAnimator;
 
     public bool isRunningAway, isLostState, isNearChar;
     private Transform runAwayTarget;
+
+
+    public List<GameObject> particles = new List<GameObject>();
+    private Vector3 previousPosition;
+    private bool InitCompleted = false;
 
     public void Init()
     {
@@ -31,10 +38,25 @@ public class Follower : MonoBehaviour
 
         transform.GetChild(charIndex).gameObject.SetActive(true);
 
-        if (Random.value < 0.1f)
+        if (Random.value < 0.1f && InitCompleted == false)
         {
             hasRandomBox = true;
             randomBoxObj.SetActive(true);
+        }
+        InitCompleted = true;
+    }
+
+    private void Update()
+    {
+
+
+        if (isNearChar && Input.GetKeyDown(KeyCode.E))
+        {
+            GameManager.Instance.GetJoinFollower(this);
+            isLostState = false;
+            isNearChar = false;
+            moveSpeed = 5f;
+            keydownButton.SetActive(false);
         }
     }
 
@@ -52,20 +74,24 @@ public class Follower : MonoBehaviour
 
     private void FixedUpdate()
     {
+        bool isMoving = (transform.position - previousPosition).sqrMagnitude > 0.001f;
 
+        if (activeAnimator != null)
+        {
+            activeAnimator.SetBool("isMoving", isMoving);
+        }
+
+        // 현재 위치를 previousPosition에 업데이트
+        previousPosition = transform.position;
+
+
+        if (target == null) return;
         // 플레이어의 위치에서 목표 위치 계산
         Vector3 targetDirection = (target.position - transform.position).normalized;
         Vector3 behindTargetPosition = target.position - targetDirection;
 
         // 목표 위치로 이동
-        Vector3 previousPosition = transform.position;
-
-        // 움직임 확인 및 애니메이션 상태 업데이트
-        bool isMoving = (transform.position - previousPosition).sqrMagnitude > 0.0001f;
-        if (activeAnimator != null)
-        {
-            activeAnimator.SetBool("isMoving", isMoving);
-        }
+        
 
         // 이동 방향에 따른 회전 설정 (왼쪽이면 y = 180, 오른쪽이면 y = 0)
         if (targetDirection.x < 0)
@@ -81,10 +107,7 @@ public class Follower : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, behindTargetPosition, moveSpeed * Time.deltaTime);
 
-        if(isNearChar && Input.GetKeyDown(KeyCode.E))
-        {
-            GameManager.Instance.GetJoinFollower(this);
-        }
+
     }
 
     public void GetRunAway(Transform target)
@@ -94,7 +117,6 @@ public class Follower : MonoBehaviour
             isRunningAway = true;
             runAwayTarget = target; // 도망갈 대상 설정
 
-            GameManager.Instance.GetLostFollower(this);
             StartCoroutine(RunAwayCoroutine());
         }
     }
@@ -104,10 +126,13 @@ public class Follower : MonoBehaviour
         while (isRunningAway)
         {
             // 대상 위치에서 현재 위치로 가는 방향 계산 (반대 방향)
-            Vector3 directionAwayFromTarget = (transform.position - runAwayTarget.position + (Vector3.up * Random.Range(-1,1))).normalized;
+            Vector3 directionAwayFromTarget = (transform.position - runAwayTarget.position + (Vector3.up * Random.Range(-1, 1))).normalized;
 
             // 반대 방향으로 이동
-            transform.position += directionAwayFromTarget * (moveSpeed*0.5f) * Time.deltaTime;
+            transform.position += directionAwayFromTarget * (moveSpeed * 0.5f) * Time.deltaTime;
+
+            Vector3 previousPosition = transform.position;
+
 
             if (directionAwayFromTarget.x < 0)
             {
@@ -124,16 +149,22 @@ public class Follower : MonoBehaviour
 
     public void GetIdleState()
     {
+        if (GameManager.Instance.player.isBinding == true) return;
+
         isRunningAway = false;
+        moveSpeed = 0;
+        isLostState = true;
+        GameManager.Instance.GetLostFollower(this);
+        StopCoroutine(RunAwayCoroutine());
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Player") == true)
+        if (other.CompareTag("Player") == true && isLostState)
         {
             keydownButton.SetActive(true);
-            Debug.Log("tree");
             isNearChar = true;
         }
 
@@ -141,11 +172,53 @@ public class Follower : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") == true)
+        if (collision.CompareTag("Player") == true && isLostState)
         {
             keydownButton.SetActive(false);
-            
+
             isNearChar = false;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player") == true && GameManager.Instance.player.isBinding == false && GameManager.Instance.player.wereWolfmode == true)
+        {
+            GetDead();
+        }
+    }
+
+    public void GetDead()
+    {
+        isRunningAway = false;
+        moveSpeed = 0;
+        Debug.Log("Dead");
+
+        transform.GetChild(charIndex).gameObject.SetActive(false);
+
+        GameManager.Instance.followers.Remove(this);
+
+        deadImg.SetActive(true);
+
+        for (int i = 0; i < 5; i++)
+        {
+            int randomIndex = Random.Range(0, particles.Count);
+
+            var part = Instantiate(particles[randomIndex], transform.position + (Random.Range(-2f, 2f) * Vector3.one), Quaternion.identity);
+
+            part.SetActive(true);
+            part.transform.localScale = Vector3.one;
+            part.transform.DOScale(2f, 1f).SetEase(Ease.InOutBounce);
+
+            Destroy(part, 1f);
+        }
+
+        Utils.DelayCall(0.1f,()=>
+        {
+            GameManager.Instance.canvasManager.totalKilledCount++;
+
+            Destroy(gameObject,2f);
+        });
     }
 }

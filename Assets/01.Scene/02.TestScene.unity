@@ -61520,12 +61520,14 @@ MonoBehaviour:
   - {fileID: 2513656920516379955, guid: fcedb88ec487e184c8032f66c430a373, type: 3}
   redMoonAmount: {fileID: 1182754453}
   redMoonRemainTime: 0
-  redMoonMaxTime: 10
+  redMoonMaxTime: 500
   redMoonLastingTime: 10
   redMoonCurLastTime: 0
   isRedMoonTime: 0
   moonText: {fileID: 1968175730}
   rouletteManager: {fileID: 0}
+  canvasManager: {fileID: 0}
+  followerSpeedDecreaseAmount: 0.2
 --- !u!4 &2023716348
 Transform:
   m_ObjectHideFlags: 0
@@ -65568,6 +65570,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821769362286509179, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821769362286509179, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821769362286509179, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2285350888074833103, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -65668,6 +65682,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3426127176433934951, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3941132516750775661, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -65682,6 +65700,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3941132516750775661, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037096723881007372, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037096723881007372, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4407127247749430057, guid: 43ad593986f9cb14ca6a20d0613c7c09, type: 3}

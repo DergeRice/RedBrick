@@ -8,7 +8,7 @@ public class RouletteManager : MonoBehaviour
 {
     public ScrollRect scrollRect;             // ScrollRect ¬¸¡∂
     public Transform content;                 // ScrollRect¿« Content
-    public GameObject itemPrefab;             // ∑Í∑ø æ∆¿Ã≈€ «¡∏Æ∆’
+    public GameObject root,itemPrefab;             // ∑Í∑ø æ∆¿Ã≈€ «¡∏Æ∆’
     public List<RouletteData> rouletteDatas;             // ∑Í∑ø æ∆¿Ã≈€ «¡∏Æ∆’
     public List<RouletteUI> rouletteUis;             // ∑Í∑ø æ∆¿Ã≈€ «¡∏Æ∆’
     public int itemCount = 10;                // æ∆¿Ã≈€ ∞≥ºˆ
@@ -31,6 +31,18 @@ public class RouletteManager : MonoBehaviour
         GameManager.Instance.rouletteManager = gameObject;
         SetupRouletteItems();
         spinButton.onClick.AddListener(StartRoulette);
+        InitRouletteDatas();
+    }
+
+    public void SetActive()
+    {
+        root.SetActive(true);
+        spinButton.enabled = true;
+    }
+    public void SetDisable()
+    {
+        root.SetActive(false);
+
     }
 
     // æ∆¿Ã≈€¿ª ScrollRect Contentø° √ﬂ∞°
@@ -43,6 +55,7 @@ public class RouletteManager : MonoBehaviour
                 int index = i;
                 GameObject item = Instantiate(itemPrefab, content);
                 item.GetComponent<RouletteUI>().text.text = $"{rouletteDatas[index].dataName}";
+                item.GetComponent<RouletteUI>().myEventIndex = index;
                 rouletteUis.Add(item.GetComponent<RouletteUI>());
             }
 
@@ -55,6 +68,7 @@ public class RouletteManager : MonoBehaviour
     {
         if (isSpinning == false)
         {
+            spinButton.enabled = false;
             StartCoroutine(SpinRoulette(Random.Range(8f,12f)));
         }
 
@@ -101,7 +115,14 @@ public class RouletteManager : MonoBehaviour
         Utils.DelayCall(0.4f, () => 
         {
             Debug.Log(GetCenterItem(offset).GetComponent<RouletteUI>().text.text);
+            
             selectedTarget = GetCenterItem(offset);
+            rouletteDatas[selectedTarget.GetComponent<RouletteUI>().myEventIndex].successAction.Invoke();
+        });
+
+        Utils.DelayCall(0.6f, () =>
+        {
+            SetDisable();
         });
     }
     GameObject GetCenterItem(float offset = 0f)
@@ -137,4 +158,69 @@ public class RouletteManager : MonoBehaviour
     {
         isAutoScrolling = !isAutoScrolling;
     }
+
+
+    public void InitRouletteDatas()
+    {
+        rouletteDatas[0].successAction += () => { AddWholeTime(); };
+        rouletteDatas[1].successAction += () => { DecreaseRedMoonTime(); };
+        rouletteDatas[2].successAction += () => { SkipNextRedMoon(); };
+        rouletteDatas[3].successAction += () => { IncreaseFollowerMax(1); };
+        rouletteDatas[4].successAction += () => { IncreasePlayerSpeed(1); };
+        rouletteDatas[5].successAction += () => { DecreaseRescueTime(0.2f); };
+        rouletteDatas[6].successAction += () => { DecreaseFollowerLoseSpeedAmount(0.2f); };
+        rouletteDatas[7].successAction += () => { IncreaseWhiteMoonTime(2f); };
+        rouletteDatas[8].successAction += () => { 
+            IncreaseFollowerMax(3);
+            IncreasePlayerSpeed(2);
+        };
+        rouletteDatas[9].successAction += () => {
+            DecreaseFollowerLoseSpeedAmount(-1f);
+            DecreaseRescueTime(-3f); 
+        };
+    }
+
+
+    public void AddWholeTime()
+    {
+        GameManager.Instance.canvasManager.sliderTimer.sliderTimer.value += 5f;
+        Debug.Log("Action Occur : AddWholeTime");
+    }
+    public void DecreaseRedMoonTime()
+    {
+        GameManager.Instance.redMoonMaxTime -= 1;
+        Debug.Log("Action Occur : DecreaseRedMoonTime");
+    }
+    public void SkipNextRedMoon()
+    {
+        GameManager.Instance.redMoonMaxTime -= 1;
+        Debug.Log("Action Occur : SkipNextRedMoon");
+    }
+    public void IncreaseFollowerMax(int amount)
+    {
+        GameManager.Instance.maxFollowers += amount;
+        Debug.Log("Action Occur : IncreaseFollowerMax");
+    }  
+    public void IncreasePlayerSpeed(int amount)
+    {
+        GameManager.Instance.player.maxSpeed += amount;
+        Debug.Log("Action Occur : IncreasePlayerSpeed");
+    }
+    public void DecreaseRescueTime(float amount)
+    {
+        Debug.Log("DecreaseRescueTime");
+        throw new System.NotImplementedException(); // ≥™¡ﬂø° ≥÷±‚
+    }    
+    public void DecreaseFollowerLoseSpeedAmount(float amount)
+    {
+
+        GameManager.Instance.followerSpeedDecreaseAmount -= amount; // ≥™¡ﬂø° ≥÷±‚
+        Debug.Log("Action Occur : DecreaseFollowerLoseSpeedAmount");
+    }   
+    public void IncreaseWhiteMoonTime(float amount)
+    {
+        GameManager.Instance.redMoonMaxTime += amount;
+        Debug.Log("Action Occur : IncreaseWhiteMoonTime");
+    }   
+
 }

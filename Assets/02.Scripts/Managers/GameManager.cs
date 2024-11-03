@@ -28,6 +28,12 @@ public class GameManager : Singleton<GameManager>
 
     public GameObject rouletteManager;
 
+    public CanvasManager canvasManager;
+
+    public float followerSpeedDecreaseAmount = 0.2f;
+
+    private int lastFollowerCount = 0; // 이전 follower의 개수 저장
+
     [ContextMenu("GetFollower")]
     public void GetFollower(Vector3 pos)
     {
@@ -40,7 +46,8 @@ public class GameManager : Singleton<GameManager>
 
         //Utils.DelayCall(2f, () => { newFollower.GetComponent<Collider2D>().isTrigger = false; });
 
-        followers.Add(newFollower);
+         if(followers.Contains(newFollower) == false )followers.Add(newFollower);
+
         SetFollowersAlign();
     }
 
@@ -50,7 +57,7 @@ public class GameManager : Singleton<GameManager>
 
         if(target.hasRandomBox == true)
         {
-            rouletteManager.SetActive(true);
+            rouletteManager.GetComponent<RouletteManager>().SetActive();
         }
         followers.Remove(target);
         Destroy(target.gameObject);
@@ -64,8 +71,10 @@ public class GameManager : Singleton<GameManager>
 
     public void GetJoinFollower(Follower follower)
     {
-        followers.Add(follower);
+        if (followers.Contains(follower) == false)  followers.Add(follower);
+        
         SetFollowersAlign();
+        Debug.Log("Added Success");
     }
 
     private void Start()
@@ -76,6 +85,12 @@ public class GameManager : Singleton<GameManager>
 
     public void Update()
     {
+        if (followers.Count != lastFollowerCount)
+        {
+            player.maxSpeed = player.originSpeed - (followerSpeedDecreaseAmount * followers.Count);
+            lastFollowerCount = followers.Count; // follower 개수를 업데이트
+        }
+
         if (isRedMoonTime == false)
         { 
             redMoonRemainTime -= Time.deltaTime;
@@ -137,23 +152,25 @@ public class GameManager : Singleton<GameManager>
 
     public void SetFollowersAlign()
     {
+        
         // 모든 follower의 인덱스와 타겟 설정
         for (int i = 0; i < followers.Count; i++)
         {
-            followers[i].myIndex = i;
+            int index = i;
+            followers[index].myIndex = index;
 
-            if (i == 0)
+            if (index == 0)
             {
                 // 0번째 follower는 플레이어를 타겟으로 설정
-                followers[i].target = player.transform;
+                followers[index].target = player.transform;
             }
             else
             {
                 // 1번째부터는 바로 앞의 follower를 타겟으로 설정
-                followers[i].target = followers[i - 1].transform;
+                followers[index].target = followers[index - 1].transform;
             }
 
-            followers[i].Init(); // 거리 초기화
+            followers[index].Init(); // 거리 초기화
         }
     }
 
@@ -165,27 +182,39 @@ public class GameManager : Singleton<GameManager>
         player.SetWereWolfMask(true);
 
 
-        Transform target = followers == null ? followers[0].transform : null;
+        Transform target = null;
+
+         if(followers.Count > 0) target =  followers[0].transform;
 
         player.SetWereWolfState(target);
 
+        List<Follower> tmpList = new List<Follower>();
+
+        tmpList = followers;
 
         for (int i = 0; i < followers.Count; i++)
         {
-            followers[i].GetRunAway(player.transform);
+            int index = i;
+            tmpList[index].GetRunAway(player.transform);
+
+            Debug.Log(index+"is Run Away");
         }
 
         Utils.DelayCall(lastingTime, () =>
         {
+            for (int i = followers.Count -1 ; i >= 0; i--)
+            {
+                int index = i;
+                if(tmpList[index] != null) tmpList[index].GetIdleState();
+                Debug.Log(index + "is Get Idle");
+            }
+
             redMoonRemainTime = redMoonMaxTime;
             isRedMoonTime = false;
             redMoonState.GetComponent<Image>().DOFade(0, 1f);
             player.SetWereWolfMask(false); // 늑인 끝
 
-            foreach (var item in followers)
-            {
-                item.GetIdleState();
-            }
+
 
         });
 

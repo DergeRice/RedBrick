@@ -19,9 +19,14 @@ public class CanvasManager : MonoBehaviour
 
     public Color disabledColor;
 
+    public SliderTimer sliderTimer;
+
+    public TMP_Text curSpeedText;
+
     private void Start()
     {
         gameManager = GameManager.Instance;
+        gameManager.canvasManager = this;
     }
 
     public void Update()
@@ -53,7 +58,26 @@ public class CanvasManager : MonoBehaviour
     {
         resquedCount.text = $"x {totalRescuedCount.ToString()}";
         killedCount.text = $"x {totalKilledCount.ToString()}";
+        curSpeedText.text = gameManager.player.maxSpeed.ToString();
 
+        // 속도에 따라 색상 설정
+        float speedDifference = gameManager.player.maxSpeed - gameManager.player.originSpeed;
+
+        if (speedDifference > 1)
+        {
+            // originSpeed보다 빠르면 초록색
+            curSpeedText.color = Color.green;
+        }
+        else if (speedDifference <= 1 && speedDifference >= -1)
+        {
+            // originSpeed에 가까우면 기본 색상 (주황)
+            curSpeedText.color = Color.yellow; // 주황색
+        }
+        else
+        {
+            // originSpeed보다 느리면 빨간색
+            curSpeedText.color = Color.red;
+        }
 
     }
 }
