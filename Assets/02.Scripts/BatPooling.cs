@@ -37,7 +37,10 @@ public class BatPooling : MonoBehaviour
     IEnumerator DisableObject()
     {
         yield return new WaitForSeconds(5.2f);
+       
         gameObject.SetActive(false);
+        Destroy(gameObject);
+
     }
     /*private Vector3 direction;
     private void OnEnable()
